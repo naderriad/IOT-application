@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Senior Status
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"> Home </ion-title>
+    </ion-toolbar>
+  </ion-header>  
+
+  <ion-card>
+    <ion-card-header>
+      Senior last room seen in
+    </ion-card-header>
+    <ion-card-content>
+       <b> Room: {{this.lastSeenLocation}}</b>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <b>Last Seen:</b>
+    </ion-card-header>
+    <ion-card-content>
+      {{this.lastTimeInSeconds}} seconds ago
+    </ion-card-content>
+  </ion-card>
+
+  <div class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        Bar Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #barCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
